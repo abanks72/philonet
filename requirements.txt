@@ -2,5 +2,5 @@ Flask
 networkx
 python-louvain
 plotly
-plotly-express
 requests
+plotly-express
