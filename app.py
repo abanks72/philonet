@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Hello, World!'
+    return render_template('index.html')
 
 # Create a new route to return JSON data
 @app.route('/get_graph_json')
@@ -22,10 +22,6 @@ def get_graph_json():
     
     # Use jsonify to return the JSON response
     return jsonify(graph_data)
-
-@app.route('/test', methods=['GET'])
-def test():
-    return render_template('index.html')
 
 @app.route('/process_dropdown', methods=['POST'])
 def process_dropdown():
