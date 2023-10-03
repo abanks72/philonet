@@ -26,7 +26,7 @@ def get_graph_json():
 
 @app.route('/test', methods=['GET'])
 def test():
-    return render_template('d3js_visual_3.html')
+    return render_template('index.html')
 
 @app.route('/process_dropdown', methods=['POST'])
 def process_dropdown():
