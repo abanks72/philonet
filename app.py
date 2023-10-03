@@ -44,7 +44,7 @@ def process_dropdown():
         return "Awww"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
 
 
 
