@@ -1,0 +1,736 @@
+{
+    "nodes": [
+        {
+            "id": "Aristotle",
+            "x": -0.1096615783809318,
+            "y": 0.7814160077945931,
+            "color": "rgb(228,26,28)",
+            "size": 45
+        },
+        {
+            "id": "Plato",
+            "x": -0.1341011347476132,
+            "y": 0.10171798193961283,
+            "color": "rgb(228,26,28)",
+            "size": 57
+        },
+        {
+            "id": "Socrates",
+            "x": -0.11525202406692382,
+            "y": 0.4473563488848612,
+            "color": "rgb(228,26,28)",
+            "size": 21
+        },
+        {
+            "id": "Heraclitus",
+            "x": -0.15643113986934007,
+            "y": 0.44879499638984255,
+            "color": "rgb(228,26,28)",
+            "size": 15
+        },
+        {
+            "id": "Immanuel_Kant",
+            "x": 0.09955457105029551,
+            "y": -0.11211558749071522,
+            "color": "rgb(55,126,184)",
+            "size": 24
+        },
+        {
+            "id": "Jean-Jacques_Rousseau",
+            "x": 0.03810888908175109,
+            "y": -0.28832220066083547,
+            "color": "rgb(77,175,74)",
+            "size": 18
+        },
+        {
+            "id": "Ren\u00e9_Descartes",
+            "x": 0.06832653651250395,
+            "y": 0.04809742954255637,
+            "color": "rgb(152,78,163)",
+            "size": 24
+        },
+        {
+            "id": "Adam_Smith",
+            "x": -0.27064745705061616,
+            "y": -1.0,
+            "color": "rgb(77,175,74)",
+            "size": 12
+        },
+        {
+            "id": "Georg_Wilhelm_Friedrich_Hegel",
+            "x": -0.47259648639191515,
+            "y": -0.7420286940232871,
+            "color": "rgb(55,126,184)",
+            "size": 6
+        },
+        {
+            "id": "Baruch_Spinoza",
+            "x": 0.24193426528352419,
+            "y": 0.1542824927018863,
+            "color": "rgb(152,78,163)",
+            "size": 27
+        },
+        {
+            "id": "Johann_Gottlieb_Fichte",
+            "x": 0.16784945031386542,
+            "y": -0.07502804582804111,
+            "color": "rgb(55,126,184)",
+            "size": 6
+        },
+        {
+            "id": "Karl_Marx",
+            "x": -0.503514199806608,
+            "y": -0.8508223445728095,
+            "color": "rgb(55,126,184)",
+            "size": 3
+        },
+        {
+            "id": "Friedrich_Nietzsche",
+            "x": 0.21315213594847793,
+            "y": 0.016019221267144546,
+            "color": "rgb(255,255,51)",
+            "size": 9
+        },
+        {
+            "id": "Arthur_Schopenhauer",
+            "x": 0.3159236850990684,
+            "y": -0.033642710270218576,
+            "color": "rgb(255,255,51)",
+            "size": 6
+        },
+        {
+            "id": "Augustine_of_Hippo",
+            "x": 0.5128864377123674,
+            "y": 0.07528409274380873,
+            "color": "rgb(152,78,163)",
+            "size": 15
+        },
+        {
+            "id": "Plotinus",
+            "x": 0.6225101344571947,
+            "y": 0.010484946506643947,
+            "color": "rgb(152,78,163)",
+            "size": 6
+        },
+        {
+            "id": "Cicero",
+            "x": -0.6103367363168891,
+            "y": 0.6404550687801487,
+            "color": "rgb(166,86,40)",
+            "size": 18
+        },
+        {
+            "id": "Thomas_Aquinas",
+            "x": 0.8432850106635502,
+            "y": 0.09621982931458047,
+            "color": "rgb(152,78,163)",
+            "size": 3
+        },
+        {
+            "id": "John_Locke",
+            "x": -0.3210627981790906,
+            "y": -0.3142922040121243,
+            "color": "rgb(77,175,74)",
+            "size": 15
+        },
+        {
+            "id": "Thomas_Hobbes",
+            "x": -0.14861555960647954,
+            "y": -0.33715674609892515,
+            "color": "rgb(77,175,74)",
+            "size": 15
+        },
+        {
+            "id": "Voltaire",
+            "x": -0.08580951724691424,
+            "y": -0.23238897033443232,
+            "color": "rgb(77,175,74)",
+            "size": 6
+        },
+        {
+            "id": "David_Hume",
+            "x": -0.9544196768505333,
+            "y": 0.19770359441657276,
+            "color": "rgb(77,175,74)",
+            "size": 9
+        },
+        {
+            "id": "Niccol\u00f2_Machiavelli",
+            "x": -0.29710633418268056,
+            "y": -0.1806379050626874,
+            "color": "rgb(228,26,28)",
+            "size": 6
+        },
+        {
+            "id": "Gottfried_Wilhelm_Leibniz",
+            "x": 0.3891095604213209,
+            "y": 0.392495457080761,
+            "color": "rgb(152,78,163)",
+            "size": 9
+        },
+        {
+            "id": "Sigmund_Freud",
+            "x": 0.14411528382253838,
+            "y": -0.9814334754746075,
+            "color": "rgb(255,255,51)",
+            "size": 3
+        },
+        {
+            "id": "S\u00f8ren_Kierkegaard",
+            "x": 0.3231487531372373,
+            "y": 0.6116386294306573,
+            "color": "rgb(255,255,51)",
+            "size": 9
+        },
+        {
+            "id": "Friedrich_Wilhelm_Joseph_Schelling",
+            "x": 0.6857407962963035,
+            "y": 0.47591634339147604,
+            "color": "rgb(55,126,184)",
+            "size": 3
+        },
+        {
+            "id": "Martin_Heidegger",
+            "x": 0.2545712536824314,
+            "y": 0.721770761997316,
+            "color": "rgb(255,255,51)",
+            "size": 3
+        },
+        {
+            "id": "Edmund_Husserl",
+            "x": 0.15983453258234917,
+            "y": 0.4507308266449662,
+            "color": "rgb(255,255,51)",
+            "size": 3
+        },
+        {
+            "id": "Ludwig_Wittgenstein",
+            "x": -0.9004966533682426,
+            "y": -0.5225151449987449,
+            "color": "rgb(255,127,0)",
+            "size": 3
+        }
+    ],
+    "links": [
+        {
+            "source": "Aristotle",
+            "target": "Immanuel_Kant"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Georg_Wilhelm_Friedrich_Hegel"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Augustine_of_Hippo"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Thomas_Aquinas"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Ren\u00e9_Descartes"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Gottfried_Wilhelm_Leibniz"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Friedrich_Wilhelm_Joseph_Schelling"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Martin_Heidegger"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Plotinus"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Thomas_Hobbes"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Cicero"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Adam_Smith"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Arthur_Schopenhauer"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Voltaire"
+        },
+        {
+            "source": "Aristotle",
+            "target": "Niccol\u00f2_Machiavelli"
+        },
+        {
+            "source": "Plato",
+            "target": "Aristotle"
+        },
+        {
+            "source": "Plato",
+            "target": "Immanuel_Kant"
+        },
+        {
+            "source": "Plato",
+            "target": "Georg_Wilhelm_Friedrich_Hegel"
+        },
+        {
+            "source": "Plato",
+            "target": "Augustine_of_Hippo"
+        },
+        {
+            "source": "Plato",
+            "target": "Thomas_Aquinas"
+        },
+        {
+            "source": "Plato",
+            "target": "Jean-Jacques_Rousseau"
+        },
+        {
+            "source": "Plato",
+            "target": "Ren\u00e9_Descartes"
+        },
+        {
+            "source": "Plato",
+            "target": "Gottfried_Wilhelm_Leibniz"
+        },
+        {
+            "source": "Plato",
+            "target": "Sigmund_Freud"
+        },
+        {
+            "source": "Plato",
+            "target": "Friedrich_Wilhelm_Joseph_Schelling"
+        },
+        {
+            "source": "Plato",
+            "target": "Martin_Heidegger"
+        },
+        {
+            "source": "Plato",
+            "target": "Plotinus"
+        },
+        {
+            "source": "Plato",
+            "target": "Edmund_Husserl"
+        },
+        {
+            "source": "Plato",
+            "target": "S\u00f8ren_Kierkegaard"
+        },
+        {
+            "source": "Plato",
+            "target": "Thomas_Hobbes"
+        },
+        {
+            "source": "Plato",
+            "target": "Cicero"
+        },
+        {
+            "source": "Plato",
+            "target": "Arthur_Schopenhauer"
+        },
+        {
+            "source": "Plato",
+            "target": "Voltaire"
+        },
+        {
+            "source": "Plato",
+            "target": "Niccol\u00f2_Machiavelli"
+        },
+        {
+            "source": "Socrates",
+            "target": "Aristotle"
+        },
+        {
+            "source": "Socrates",
+            "target": "Plato"
+        },
+        {
+            "source": "Socrates",
+            "target": "Augustine_of_Hippo"
+        },
+        {
+            "source": "Socrates",
+            "target": "Thomas_Aquinas"
+        },
+        {
+            "source": "Socrates",
+            "target": "Jean-Jacques_Rousseau"
+        },
+        {
+            "source": "Socrates",
+            "target": "S\u00f8ren_Kierkegaard"
+        },
+        {
+            "source": "Socrates",
+            "target": "Cicero"
+        },
+        {
+            "source": "Heraclitus",
+            "target": "Aristotle"
+        },
+        {
+            "source": "Heraclitus",
+            "target": "Plato"
+        },
+        {
+            "source": "Heraclitus",
+            "target": "Friedrich_Nietzsche"
+        },
+        {
+            "source": "Heraclitus",
+            "target": "Martin_Heidegger"
+        },
+        {
+            "source": "Heraclitus",
+            "target": "Plotinus"
+        },
+        {
+            "source": "Immanuel_Kant",
+            "target": "Georg_Wilhelm_Friedrich_Hegel"
+        },
+        {
+            "source": "Immanuel_Kant",
+            "target": "Karl_Marx"
+        },
+        {
+            "source": "Immanuel_Kant",
+            "target": "Friedrich_Wilhelm_Joseph_Schelling"
+        },
+        {
+            "source": "Immanuel_Kant",
+            "target": "Edmund_Husserl"
+        },
+        {
+            "source": "Immanuel_Kant",
+            "target": "Ludwig_Wittgenstein"
+        },
+        {
+            "source": "Immanuel_Kant",
+            "target": "S\u00f8ren_Kierkegaard"
+        },
+        {
+            "source": "Immanuel_Kant",
+            "target": "Johann_Gottlieb_Fichte"
+        },
+        {
+            "source": "Immanuel_Kant",
+            "target": "Arthur_Schopenhauer"
+        },
+        {
+            "source": "Jean-Jacques_Rousseau",
+            "target": "Immanuel_Kant"
+        },
+        {
+            "source": "Jean-Jacques_Rousseau",
+            "target": "Georg_Wilhelm_Friedrich_Hegel"
+        },
+        {
+            "source": "Jean-Jacques_Rousseau",
+            "target": "Karl_Marx"
+        },
+        {
+            "source": "Jean-Jacques_Rousseau",
+            "target": "David_Hume"
+        },
+        {
+            "source": "Jean-Jacques_Rousseau",
+            "target": "Johann_Gottlieb_Fichte"
+        },
+        {
+            "source": "Jean-Jacques_Rousseau",
+            "target": "Arthur_Schopenhauer"
+        },
+        {
+            "source": "Ren\u00e9_Descartes",
+            "target": "Immanuel_Kant"
+        },
+        {
+            "source": "Ren\u00e9_Descartes",
+            "target": "Baruch_Spinoza"
+        },
+        {
+            "source": "Ren\u00e9_Descartes",
+            "target": "John_Locke"
+        },
+        {
+            "source": "Ren\u00e9_Descartes",
+            "target": "Gottfried_Wilhelm_Leibniz"
+        },
+        {
+            "source": "Ren\u00e9_Descartes",
+            "target": "Edmund_Husserl"
+        },
+        {
+            "source": "Ren\u00e9_Descartes",
+            "target": "S\u00f8ren_Kierkegaard"
+        },
+        {
+            "source": "Ren\u00e9_Descartes",
+            "target": "Thomas_Hobbes"
+        },
+        {
+            "source": "Ren\u00e9_Descartes",
+            "target": "Arthur_Schopenhauer"
+        },
+        {
+            "source": "Adam_Smith",
+            "target": "Immanuel_Kant"
+        },
+        {
+            "source": "Adam_Smith",
+            "target": "Georg_Wilhelm_Friedrich_Hegel"
+        },
+        {
+            "source": "Adam_Smith",
+            "target": "Karl_Marx"
+        },
+        {
+            "source": "Adam_Smith",
+            "target": "David_Hume"
+        },
+        {
+            "source": "Georg_Wilhelm_Friedrich_Hegel",
+            "target": "Karl_Marx"
+        },
+        {
+            "source": "Georg_Wilhelm_Friedrich_Hegel",
+            "target": "S\u00f8ren_Kierkegaard"
+        },
+        {
+            "source": "Baruch_Spinoza",
+            "target": "Georg_Wilhelm_Friedrich_Hegel"
+        },
+        {
+            "source": "Baruch_Spinoza",
+            "target": "Friedrich_Nietzsche"
+        },
+        {
+            "source": "Baruch_Spinoza",
+            "target": "Jean-Jacques_Rousseau"
+        },
+        {
+            "source": "Baruch_Spinoza",
+            "target": "John_Locke"
+        },
+        {
+            "source": "Baruch_Spinoza",
+            "target": "Gottfried_Wilhelm_Leibniz"
+        },
+        {
+            "source": "Baruch_Spinoza",
+            "target": "Friedrich_Wilhelm_Joseph_Schelling"
+        },
+        {
+            "source": "Baruch_Spinoza",
+            "target": "Ludwig_Wittgenstein"
+        },
+        {
+            "source": "Baruch_Spinoza",
+            "target": "Johann_Gottlieb_Fichte"
+        },
+        {
+            "source": "Baruch_Spinoza",
+            "target": "Arthur_Schopenhauer"
+        },
+        {
+            "source": "Johann_Gottlieb_Fichte",
+            "target": "Georg_Wilhelm_Friedrich_Hegel"
+        },
+        {
+            "source": "Johann_Gottlieb_Fichte",
+            "target": "Friedrich_Wilhelm_Joseph_Schelling"
+        },
+        {
+            "source": "Friedrich_Nietzsche",
+            "target": "Sigmund_Freud"
+        },
+        {
+            "source": "Friedrich_Nietzsche",
+            "target": "Martin_Heidegger"
+        },
+        {
+            "source": "Friedrich_Nietzsche",
+            "target": "Ludwig_Wittgenstein"
+        },
+        {
+            "source": "Arthur_Schopenhauer",
+            "target": "Friedrich_Nietzsche"
+        },
+        {
+            "source": "Arthur_Schopenhauer",
+            "target": "Ludwig_Wittgenstein"
+        },
+        {
+            "source": "Augustine_of_Hippo",
+            "target": "Thomas_Aquinas"
+        },
+        {
+            "source": "Augustine_of_Hippo",
+            "target": "Ren\u00e9_Descartes"
+        },
+        {
+            "source": "Augustine_of_Hippo",
+            "target": "Martin_Heidegger"
+        },
+        {
+            "source": "Augustine_of_Hippo",
+            "target": "Ludwig_Wittgenstein"
+        },
+        {
+            "source": "Augustine_of_Hippo",
+            "target": "S\u00f8ren_Kierkegaard"
+        },
+        {
+            "source": "Plotinus",
+            "target": "Augustine_of_Hippo"
+        },
+        {
+            "source": "Plotinus",
+            "target": "Friedrich_Wilhelm_Joseph_Schelling"
+        },
+        {
+            "source": "Cicero",
+            "target": "Augustine_of_Hippo"
+        },
+        {
+            "source": "Cicero",
+            "target": "Thomas_Aquinas"
+        },
+        {
+            "source": "Cicero",
+            "target": "David_Hume"
+        },
+        {
+            "source": "Cicero",
+            "target": "Thomas_Hobbes"
+        },
+        {
+            "source": "Cicero",
+            "target": "Voltaire"
+        },
+        {
+            "source": "Cicero",
+            "target": "Niccol\u00f2_Machiavelli"
+        },
+        {
+            "source": "Thomas_Aquinas",
+            "target": "Ren\u00e9_Descartes"
+        },
+        {
+            "source": "John_Locke",
+            "target": "Jean-Jacques_Rousseau"
+        },
+        {
+            "source": "John_Locke",
+            "target": "David_Hume"
+        },
+        {
+            "source": "John_Locke",
+            "target": "Adam_Smith"
+        },
+        {
+            "source": "John_Locke",
+            "target": "Arthur_Schopenhauer"
+        },
+        {
+            "source": "John_Locke",
+            "target": "Voltaire"
+        },
+        {
+            "source": "Thomas_Hobbes",
+            "target": "Jean-Jacques_Rousseau"
+        },
+        {
+            "source": "Thomas_Hobbes",
+            "target": "David_Hume"
+        },
+        {
+            "source": "Thomas_Hobbes",
+            "target": "Baruch_Spinoza"
+        },
+        {
+            "source": "Thomas_Hobbes",
+            "target": "John_Locke"
+        },
+        {
+            "source": "Thomas_Hobbes",
+            "target": "Gottfried_Wilhelm_Leibniz"
+        },
+        {
+            "source": "Voltaire",
+            "target": "Jean-Jacques_Rousseau"
+        },
+        {
+            "source": "Voltaire",
+            "target": "Arthur_Schopenhauer"
+        },
+        {
+            "source": "David_Hume",
+            "target": "Edmund_Husserl"
+        },
+        {
+            "source": "David_Hume",
+            "target": "Adam_Smith"
+        },
+        {
+            "source": "David_Hume",
+            "target": "Arthur_Schopenhauer"
+        },
+        {
+            "source": "Niccol\u00f2_Machiavelli",
+            "target": "Baruch_Spinoza"
+        },
+        {
+            "source": "Niccol\u00f2_Machiavelli",
+            "target": "Thomas_Hobbes"
+        },
+        {
+            "source": "Gottfried_Wilhelm_Leibniz",
+            "target": "Friedrich_Wilhelm_Joseph_Schelling"
+        },
+        {
+            "source": "Gottfried_Wilhelm_Leibniz",
+            "target": "Edmund_Husserl"
+        },
+        {
+            "source": "Gottfried_Wilhelm_Leibniz",
+            "target": "Voltaire"
+        },
+        {
+            "source": "Sigmund_Freud",
+            "target": "Ludwig_Wittgenstein"
+        },
+        {
+            "source": "S\u00f8ren_Kierkegaard",
+            "target": "Sigmund_Freud"
+        },
+        {
+            "source": "S\u00f8ren_Kierkegaard",
+            "target": "Martin_Heidegger"
+        },
+        {
+            "source": "S\u00f8ren_Kierkegaard",
+            "target": "Ludwig_Wittgenstein"
+        },
+        {
+            "source": "Friedrich_Wilhelm_Joseph_Schelling",
+            "target": "S\u00f8ren_Kierkegaard"
+        },
+        {
+            "source": "Edmund_Husserl",
+            "target": "Martin_Heidegger"
+        }
+    ]
+}

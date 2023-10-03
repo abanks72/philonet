@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+    <h1>Select "Yes" or "No"</h1>
+    <form method="POST" action="{{ url_for('process_dropdown') }}">
+        <label for="selection">Choose:</label>
+        <select id="selection" name="selection">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
