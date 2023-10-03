@@ -39,7 +39,7 @@
         // Define a global variable to store the JSON data
         let graphData;
 
-        fetch('/get_graph_json')
+        fetch('https://philonet-7f9320692cfa.herokuapp.com/get_graph_json')
             .then(response => response.json())
             .then(data => {
                 graphData = data; // Store the JSON data in the global variable
