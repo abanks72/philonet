@@ -2,8 +2,11 @@ from flask import Flask, render_template, request, jsonify
 from philosopher import create_philosopher_graph, calculate_edge_weights, calculate_node_weights, perform_community_detection, json_format_dict
 import networkx as nx
 import sqlite3
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def index():

@@ -3,3 +3,4 @@ networkx
 python-louvain
 plotly
 plotly-express
+flask-cors
