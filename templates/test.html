@@ -1,17 +1,143 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Test Page</title>
+    <title>D3.js Graph Visualization</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .node {
+            stroke: #fff;
+            stroke-width: 2px;
+        }
+
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+
+        .node-label {
+            display: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        #d3-visualization-container svg {
+            max-width: 100%; /* Make the SVG responsive */
+            height: auto; /* Automatically adjust height */
+        }
+    </style>
 </head>
 <body>
-    <h1>Select "Yes" or "No"</h1>
-    <form method="POST" action="{{ url_for('process_dropdown') }}">
-        <label for="selection">Choose:</label>
-        <select id="selection" name="selection">
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
+    <div class="container">
+        <h1>Philosopher Graph</h1>
+        <p>Philosopher Influences with Weighted Edges Based on Shared Attributes and Community Detection</p>
+        <label for="era">Select Era:</label>
+        <select id="era" name="era" onchange="updateGraph()">
+            <option value="All">All</option>
+            <option value="BC">BC</option>
+            <option value="AD">AD</option>
         </select>
-        <input type="submit" value="Submit">
-    </form>
+    </div>
+    
+    <div class="container">
+        <div id="d3-visualization-container">
+            <svg width="1000" height="700"></svg>
+        </div>
+        <div id="node-label-container"></div>
+    </div>
+
+        <!-- Add Bootstrap JavaScript and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Define a global variable to store the JSON data
+        let graphData;
+
+        fetch('http://localhost:5000/get_graph_json')
+            .then(response => response.json())
+            .then(data => {
+                graphData = data; // Store the JSON data in the global variable
+                visualizeGraph(); // Call the visualization function
+            })
+            .catch(error => console.error('Error:', error));
+
+        
+        // Define a function to update the graph based on the selected era
+        function updateGraph() {
+            const selectedEra = document.getElementById("era").value;
+                fetch(`/get_graph_json?era=${selectedEra}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Remove the existing SVG content
+                        d3.select("svg").selectAll("*").remove();
+
+                        graphData = data; // Store the new JSON data in the global variable
+                        visualizeGraph(); // Call the visualization function with the updated data
+                    })
+                    .catch(error => console.error('Error:', error));
+        }
+
+        // Define a function to visualize the graph
+        function visualizeGraph() {
+            const svg = d3.select("svg");
+            const width = +svg.attr("width");
+            const height = +svg.attr("height");
+
+            const nodes = graphData.nodes;
+            const links = graphData.links;
+
+            // Calculate the center of the SVG container
+            const centerX = width / 2;
+            const centerY = height / 2;
+
+            console.log("Node positions after adjustment:");
+            console.log(nodes);
+
+            // Update node positions to be centered
+            nodes.forEach(function (node) {
+                node.x = centerX + node.x * 500; // Adjust coordinates as needed
+                node.y = centerY + node.y * 325; // Adjust y-coordinate as needed
+            });
+
+            const link = svg.selectAll(".link")
+                .data(links)
+                .enter().append("line")
+                .attr("class", "link")
+                .attr("x1", d => nodes.find(node => node.id === d.source).x)
+                .attr("y1", d => nodes.find(node => node.id === d.source).y)
+                .attr("x2", d => nodes.find(node => node.id === d.target).x)
+                .attr("y2", d => nodes.find(node => node.id === d.target).y);
+
+            const node = svg.selectAll(".node")
+                .data(nodes)
+                .enter().append("circle")
+                .attr("class", "node")
+                .attr("r", d => d.size)
+                .attr("cx", d => d.x) // Use x coordinate from JSON
+                .attr("cy", d => d.y) // Use y coordinate from JSON
+                .style("fill", d => d.color) // Set node fill color based on the "color" property
+                .on("mouseover", handleMouseOver)
+                .on("mouseout", handleMouseOut);
+
+            node.append("title")
+                .text(d => d.id);
+
+            function handleMouseOver(d) {
+                const nodeLabel = d3.select("#node-label-container")
+                    .append("div")
+                    .attr("class", "node-label")
+                    .text(d.id);
+
+                nodeLabel.style("left", (d.x + 20) + "px")
+                    .style("top", (d.y - 20) + "px")
+                    .style("display", "block");
+            }
+
+            function handleMouseOut() {
+                d3.select(".node-label").remove();
+            }
+        }
+    </script>
 </body>
 </html>

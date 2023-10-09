@@ -34,6 +34,49 @@ def create_philosopher_graph():
 
     return G
 
+def create_philosopher_graph_test(era='All'):
+    G = nx.DiGraph()
+
+    # Connect to the database
+    db_connection = sqlite3.connect('philosophers.db')
+    db_cursor = db_connection.cursor()
+
+    # Define the SQL query based on the specified era
+    if era == 'All':
+        # If 'All' is specified, retrieve all philosophers
+        db_cursor.execute('SELECT name, influences FROM philosophers')
+    else:
+        # If a specific era is specified, retrieve philosophers from that era
+        db_cursor.execute('SELECT name, influences FROM philosophers WHERE era = ?', (era,))
+
+    # Fetch all rows as a list of tuples
+    rows = db_cursor.fetchall()
+
+    # Create a set to store BC philosophers
+    bc_philosophers = set()
+
+    # If era is "AD," identify BC philosophers and exclude them from influences
+    if era == "AD":
+        bc_philosophers_query = 'SELECT name FROM philosophers WHERE era = "BC"'
+        bc_philosophers_result = db_cursor.execute(bc_philosophers_query)
+        bc_philosophers = {row[0] for row in bc_philosophers_result}
+
+    # Iterate through the rows and add nodes and edges to the graph
+    for name, influences in rows:
+        G.add_node(name)
+        
+        # Parse the 'influences' column and add edges if there are influences
+        influence_list = influences.split(', ')
+        for influence in influence_list:
+            if influence.strip() and influence not in bc_philosophers:
+                G.add_edge(influence, name)
+
+    # Close the database connection
+    db_connection.close()
+
+    return G
+
+
 def calculate_edge_weights(G):
 
     # Connect to the database
@@ -148,7 +191,7 @@ def json_format_dict(G, node_weights, partition):
     
     pos = nx.spring_layout(G, seed=42)  # Calculate the spring layout
     colors = px.colors.qualitative.Set1
-    size_scaling_factor = 3
+    size_scaling_factor = 2
 
     # Create a dictionary for nodes with x, y coordinates, color, and size
     nodes = [
@@ -178,6 +221,37 @@ def json_dict_to_json(graph_data):
     # Save the JSON data to a file
     with open("philosopher_data_4.json", "w") as json_file:
         json_file.write(json_data)
+
+def filter_data_by_era_test(era):
+    filtered_data = {}
+
+    # Connect to the database
+    db_connection = sqlite3.connect('philosophers.db')
+    db_cursor = db_connection.cursor()
+
+    # Modify the SQL query to filter philosophers by era
+    if era == "All":
+        db_cursor.execute('SELECT name, influences FROM philosophers')
+    else:
+        db_cursor.execute('SELECT name, influences FROM philosophers WHERE era = ?', (era,))
+
+    # Fetch all rows as a list of tuples
+    rows = db_cursor.fetchall()
+
+    # Create a dictionary to store the philosopher's influences
+    philosopher_influences = {name: influences.split(', ') for name, influences in rows}
+
+    # Iterate through the philosophers and calculate node weights
+    for philosopher in philosopher_influences:
+        filtered_details = {
+            "Influences": [influence for influence in philosopher_influences[philosopher] if influence],
+        }
+        filtered_data[philosopher] = filtered_details
+
+    # Close the database connection
+    db_connection.close()
+
+    return filtered_data
 
 def filter_data_by_era(data, era):
 
@@ -284,11 +358,11 @@ def database_populate(data):
 
 def main():
 
-    graph = create_philosopher_graph()
+    graph = create_philosopher_graph_test()
     graph = calculate_edge_weights(graph)
     weights = calculate_node_weights()
     partition = perform_community_detection(graph)
-
+    print_communities(partition)
     visualize_network(graph, weights, partition)
         
 if __name__ == "__main__":

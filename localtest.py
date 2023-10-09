@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('test.html')
 
 # Create a new route to return JSON data
 @app.route('/get_graph_json')
@@ -29,10 +29,6 @@ if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
     app.run(debug=True)
-
-
-
-
 
 
 
