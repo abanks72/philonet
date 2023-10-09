@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>D3.js Graph Visualization</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         .node {
@@ -13,39 +14,69 @@
             stroke: #999;
             stroke-opacity: 0.6;
         }
+
         .node-label {
             display: none;
             font-size: 14px;
             font-weight: bold;
         }
+        #d3-visualization-container svg {
+            max-width: 100%; /* Make the SVG responsive */
+            height: auto; /* Automatically adjust height */
+        }
     </style>
 </head>
 <body>
-    <svg width="2000" height="1500"></svg>
-    <div id="node-label-container"></div>
-
-    <label for="era-select">Select Era:</label>
-    <select id="era-select">
-        <option value="All">All</option>
-        <option value="BC">BC</option>
-        <option value="AD">AD</option>
-    </select>
-
-    <div id="visualization-container">
-        <!-- D3.js visualization will be added here -->
+    <div class="container">
+        <h1>Philosopher Graph</h1>
+        <p>Philosopher Influences with Weighted Edges Based on Shared Attributes and Community Detection</p>
+        <label for="era">Select Era:</label>
+        <select id="era" name="era" onchange="updateGraph()">
+            <option value="All">All</option>
+            <option value="BC">BC</option>
+            <option value="AD">AD</option>
+        </select>
     </div>
+    
+    <div class="container">
+        <div id="d3-visualization-container">
+            <svg width="1000" height="700"></svg>
+        </div>
+        <div id="node-label-container"></div>
+    </div>
+
+        <!-- Add Bootstrap JavaScript and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
         // Define a global variable to store the JSON data
         let graphData;
 
-        fetch('https://philonet-7f9320692cfa.herokuapp.com/get_graph_json')
+        fetch('localhost:5000/get_graph_json')
             .then(response => response.json())
             .then(data => {
                 graphData = data; // Store the JSON data in the global variable
                 visualizeGraph(); // Call the visualization function
-        })
-        .catch(error => console.error('Error:', error));
+            })
+            .catch(error => console.error('Error:', error));
+
+        
+        // Define a function to update the graph based on the selected era
+        function updateGraph() {
+            const selectedEra = document.getElementById("era").value;
+                fetch(`/get_graph_json?era=${selectedEra}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Remove the existing SVG content
+                        d3.select("svg").selectAll("*").remove();
+
+                        graphData = data; // Store the new JSON data in the global variable
+                        visualizeGraph(); // Call the visualization function with the updated data
+                    })
+                    .catch(error => console.error('Error:', error));
+        }
 
         // Define a function to visualize the graph
         function visualizeGraph() {
@@ -60,10 +91,13 @@
             const centerX = width / 2;
             const centerY = height / 2;
 
+            console.log("Node positions after adjustment:");
+            console.log(nodes);
+
             // Update node positions to be centered
             nodes.forEach(function (node) {
                 node.x = centerX + node.x * 500; // Adjust coordinates as needed
-                node.y = centerY + node.y * 500; // Adjust y-coordinate as needed
+                node.y = centerY + node.y * 325; // Adjust y-coordinate as needed
             });
 
             const link = svg.selectAll(".link")
@@ -104,26 +138,6 @@
                 d3.select(".node-label").remove();
             }
         }
-
-        const eraSelect = document.getElementById("era-select");
-        const visualizationContainer = document.getElementById("visualization-container");
-
-        // Add an event listener to the select element
-        eraSelect.addEventListener("change", function () {
-            const selectedEra = eraSelect.value;
-
-            // Load and display the visualization based on the selected era
-            if (selectedEra === "All") {
-                // Load and display visualizations for all eras using D3.js
-                visualizationContainer.innerHTML = "<p>All era visualizations go here.</p>";
-            } else if (selectedEra === "BC") {
-                // Load and display BC-era visualization using D3.js
-                visualizationContainer.innerHTML = "<p>BC-era visualization goes here.</p>";
-            } else if (selectedEra === "AD") {
-                // Load and display AD-era visualization using D3.js
-                visualizationContainer.innerHTML = "<p>AD-era visualization goes here.</p>";
-            }
-        });
     </script>
 </body>
 </html>
