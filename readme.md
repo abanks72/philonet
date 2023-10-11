@@ -62,7 +62,7 @@ The local test server will be accessible at http://localhost:5000.
    ```bash
    python localtest.py
   ```
-**Important:** The local testing environment is specifically designed for testing and development purposes. To deploy the project to a public server, consider using an appropriate hosting platform. app.py, and index.html are being fetched from a Heroku server. 
+**Important:** The local testing environment is specifically designed for testing and development purposes. To deploy the project to a public server, consider using an appropriate hosting platform.
 
 ### Usage
 - select the era from the dropdown menu to filter the philosopher influence network. You can choose from "All," "BC," or "AD."
