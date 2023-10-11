@@ -19,7 +19,7 @@ https://philotest-1c81b50727e1.herokuapp.com/
 
 ## Features
 
-The Philosopher Influence Network Visualization project offers a range of features to explore the connections and influences among philosophers throughout history. Some of the key features include:
+Philonet offers a range of features to explore the connections and influences among philosophers throughout history. Some of the key features include:
 
 - **Dynamic Visualization:** Visualize the philosopher network using D3.js, built from Python's NetworkX library, which provides an interactive and dynamic graph visualization.
 
