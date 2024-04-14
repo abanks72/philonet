@@ -54,9 +54,10 @@
         // Define a global variable to store the JSON data
         let graphData;
 
-        fetch('https://philotest-1c81b50727e1.herokuapp.com/get_graph_json')
+        fetch('http://localhost:5000/get_graph_json')
             .then(response => response.json())
             .then(data => {
+                console.log(data); // Log the fetched data for debugging
                 graphData = data; // Store the JSON data in the global variable
                 visualizeGraph(); // Call the visualization function
             })
@@ -66,7 +67,7 @@
         // Define a function to update the graph based on the selected era
         function updateGraph() {
             const selectedEra = document.getElementById("era").value;
-                fetch(`https://philotest-1c81b50727e1.herokuapp.com/get_graph_json?era=${selectedEra}`)
+                fetch(`/get_graph_json?era=${selectedEra}`)
                     .then(response => response.json())
                     .then(data => {
                         // Remove the existing SVG content

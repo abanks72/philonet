@@ -3,13 +3,13 @@ import community, json, sqlite3
 import plotly.graph_objs as go
 import plotly.offline as pyo
 import plotly.express as px
-from philosopher_data import philosophers_data
+from app.data.philosopher_data import philosophers_data
 
 def create_philosopher_graph():
     G = nx.DiGraph()
 
     # Connect to the database
-    db_connection = sqlite3.connect('philosophers.db')
+    db_connection = sqlite3.connect('app/database/philosophers.db')
     db_cursor = db_connection.cursor()
 
     # Query the 'philosophers' table to get philosopher data
@@ -38,7 +38,7 @@ def create_philosopher_graph_test(era='All'):
     G = nx.DiGraph()
 
     # Connect to the database
-    db_connection = sqlite3.connect('philosophers.db')
+    db_connection = sqlite3.connect('app/database/philosophers.db')
     db_cursor = db_connection.cursor()
 
     # Define the SQL query based on the specified era
@@ -80,7 +80,7 @@ def create_philosopher_graph_test(era='All'):
 def calculate_edge_weights(G):
 
     # Connect to the database
-    db_connection = sqlite3.connect('philosophers.db')
+    db_connection = sqlite3.connect('app/database/philosophers.db')
     db_cursor = db_connection.cursor()
 
     # Iterate through the edges in the graph
@@ -114,7 +114,7 @@ def calculate_node_weights():
     node_weights = {}
 
     # Connect to the database
-    db_connection = sqlite3.connect('philosophers.db')
+    db_connection = sqlite3.connect('app/database/philosophers.db')
     db_cursor = db_connection.cursor()
 
     # Query the 'philosophers' table to get philosopher names and influences
@@ -226,7 +226,7 @@ def filter_data_by_era_test(era):
     filtered_data = {}
 
     # Connect to the database
-    db_connection = sqlite3.connect('philosophers.db')
+    db_connection = sqlite3.connect('app/database/philosophers.db')
     db_cursor = db_connection.cursor()
 
     # Modify the SQL query to filter philosophers by era
