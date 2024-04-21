@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, jsonify
-from app.services.philosopher import (create_philosopher_graph, calculate_edge_weights,
+from app.services.functionality import (calculate_edge_weights,
                                       calculate_node_weights, perform_community_detection, 
                                       json_format_dict, create_philosopher_graph_test)
 
